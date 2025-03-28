@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@theme {
+    --font-Rubik: "Rubik";
+    --color-primary: #FEA015;
+    --color-background: #0F0F0F;
+    --color-backgroundlight: #171717;
+    --color-red: #C72F4D;
+    --color-green: #48CF78;
+    --color-darkgreen: #006239;
+    --color-gray: #9D9D9D;
+}
+
+* {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+body {
+    @apply bg-background text-white
+}
+
+.greenButton {
+    @apply bg-darkgreen px-3 py-1 rounded-full text-white border-green border-2 cursor-pointer hover:scale-110
+}
+
+.tag{
+    @apply border-2 text-white font-semibold px-3 py-1 bg-backgroundlight rounded-2xl
+}
