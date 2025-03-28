@@ -5,6 +5,7 @@ import Lander from "./Lander";
 import SignUp from './signup';
 import SignIn from './signin';
 import Questions from './Questions';
+import Product from './Product';
 
 function App() {
     return (
@@ -13,7 +14,8 @@ function App() {
       <Lander /> */}
       {/* <SignIn /> */}
       <NavBar />
-      <Questions />
+      {/* <Questions /> */}
+      <Product />
     </>
     );
 }

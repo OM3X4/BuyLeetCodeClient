@@ -4,7 +4,7 @@ import React from 'react';
 function NavBar() {
     return (
     <>
-        <div className='flex items-center justify-between px-20 gap-10 min-h-20'>
+        <div className='flex items-center justify-between px-20 gap-10 min-h-20 bg-backgroundlight'>
             <div className='flex items-center justify-center gap-30'>
                 <h1 className='text-primary font-mono text-3xl font-bold cursor-pointer'>BuyLeetCode</h1>
                 <ul className='flex items-center justify-center gap-10'>

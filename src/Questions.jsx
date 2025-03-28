@@ -18,10 +18,36 @@ function Questions() {
     return (
     <>
         <div className='flex items-center justify-between min-h-[calc(100vh-5rem)] w-screen'>
-            <div className='flex-[4]'>
-                <QuestionCard data={data[0]}/>
+            <div className='flex-[4] flex-wrap items-center justify-start gap-10 p-10 flex mr-[20vw]'>
+                {
+                    data.map((item , index) => {
+                        if (topic === "0" && Diff === "0") {
+                            return (
+                                <QuestionCard key={index} data={item}/>
+                            )
+                        } else if (topic !== "0" && Diff === "0") {
+                            if (item.related_topics?.includes(topic)) {
+                                return (
+                                    <QuestionCard key={index} data={item}/>
+                                )
+                            }
+                        } else if (Diff !== "0" && topic === "0") {
+                            if (item.difficulty === Diff) {
+                                return (
+                                    <QuestionCard key={index} data={item}/>
+                                )
+                            }
+                        } else if (Diff !== "0" && topic !== "0") {
+                            if (item.difficulty === Diff && item.related_topics?.includes(topic)) {
+                                return (
+                                    <QuestionCard key={index} data={item}/>
+                                )
+                            }
+                        }
+                    })
+                }
             </div>
-            <div className='bg-backgroundlight flex-1  h-[calc(100vh-5rem)] flex items-center py-10 flex-col px-5'>
+            <div className='fixed top-20 right-0  bg-backgroundlight w-[20vw]  h-[calc(100vh-5rem)] flex items-center py-10 flex-col px-5'>
                 <h1>Filter</h1>
                 <div className='flex items-center justify-center gap-6'>
                     <h1 className='text-sm'>Topics</h1>
